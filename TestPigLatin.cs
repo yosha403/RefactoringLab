@@ -9,12 +9,14 @@ namespace PigLatin
     {
         [Theory]
         [InlineData("apple", "appleway")]
-      /*  [InlineData("heck", "eckhay")]*/
+        [InlineData("heck", "eckhay")]
+        [InlineData("strong", "ongstray")]
         [InlineData("tommy@email.com", "tommy@email.com")]
         [InlineData("aardvark", "aardvarkway")]
-        [InlineData("gym", "gym")]   
-        
-        
+        [InlineData("Tommy", "ommytay")]
+        [InlineData("gym", "gym")]
+       /* [InlineData("apple joy gym tommy@email.com strong", "appleway oyjay gym tommy@email.com ongstray")]*/
+
         public void TestToPigLatin(string name, string expected)
         {
             //Arrange

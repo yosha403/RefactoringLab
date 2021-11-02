@@ -6,7 +6,6 @@ namespace PigLatin
 {
     class PigLatin
     {
-
         //static void Main(string[] args)
         //{
            // string userInput = GetInput("Please input a word or sentence to translate to pig Latin");
@@ -65,12 +64,10 @@ namespace PigLatin
                 return word;
             }
 
-            char firstLetter = word[0];
-            //string output = "placeholder";
+            char firstLetter = word[0];           
             string output;
             if (IsVowel(firstLetter) == true)
-            {
-                //output = word + "ay";
+            {                
                 output = word + "way";
             }
             else
@@ -87,8 +84,8 @@ namespace PigLatin
                     }
                 }
 
-                string sub = word.Substring(vowelIndex + 1);
-                string postFix = word.Substring(0, vowelIndex - 1);
+                string sub = word.Substring(vowelIndex);
+                string postFix = word.Substring(0, vowelIndex);
 
                 output = sub + postFix + "ay";
             }
